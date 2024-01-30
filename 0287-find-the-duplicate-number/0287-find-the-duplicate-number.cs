@@ -1,12 +1,9 @@
+using System.Linq;
 public class Solution
 {
     public int FindDuplicate(int[] nums)
     {
-        Dictionary<int,int> keyValuePairs = new Dictionary<int,int>();
-        foreach (int i in nums)
-            if (keyValuePairs.ContainsKey(i))
-                return i;
-            else keyValuePairs[i]=1;
-        return -1;
+       var a= nums.GroupBy(x => x).Where(g=> g.Count() > 1).Select(g => new { Item = g.Key, Frequency = g.Count() });
+        return a.First().Item ;
     }
 }
