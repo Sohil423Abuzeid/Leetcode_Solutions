@@ -12,7 +12,6 @@ public class Solution : GuessGame {
 {
     int i = 1, o = n, mid;
     while (i <=o) {
-        Console.WriteLine(\a\+i+\ \+o);
         mid =i+(o - i) / 2;
         int a=guess(mid);
         if (a == 0)
