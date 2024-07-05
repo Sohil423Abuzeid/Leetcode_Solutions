@@ -10,9 +10,9 @@ public:
             if (strs[i][o] >= 'a' && strs[i][o] <= 'z')
                 f = false;
         }
-        string s = strs[i];
+       
         if (f)
-            ans = max(ans,stoi(s));
+            ans = max(ans,stoi(strs[i]));
         else
             ans = max(ans, (int) strs[i].length());
     }
