@@ -11,9 +11,12 @@ public:
         for(int i=boxes.size()-1 ; i >=0;i--)
         {
             bsum+= b;
-            b+= (boxes[i]=='1');
             ans[i] =bsum+asum;
-            a-= (boxes[i]=='1');
+            if(boxes[i]=='1')
+            {
+                b++;
+                a--;
+            }
             asum-= a;
         }
         return ans;
