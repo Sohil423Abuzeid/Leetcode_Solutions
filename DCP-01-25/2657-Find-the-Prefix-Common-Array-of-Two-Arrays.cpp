@@ -1,6 +1,7 @@
 class Solution {
 public:
     vector<int> findThePrefixCommonArray(vector<int>& A, vector<int>& B) {
+        // not best after read the stat again but iam lazy to change it i thought numbers can repeat  
         map<int,bool>inA,inB,Done;
         vector<int> ans (A.size());
         for(int i =0 ; i < A.size();i++){
