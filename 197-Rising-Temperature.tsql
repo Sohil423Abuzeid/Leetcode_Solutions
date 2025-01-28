@@ -1,0 +1,4 @@
+/* Write your T-SQL query statement below */
+select a.id from weather as a 
+join weather as b on 
+a.recordDate  =DATEADD(day, 1, b.recordDate ) and a.temperature > b.temperature  
